@@ -1,7 +1,7 @@
 # 100_DAYS_RTL Coding Challenge
 Starting my 100 days RTL coding challenge 
 just to have discipline and consistency in VLSI domain starting this challenge right from basics to advanced 
-If anyone finds this useful and likes my consistency please consider me for opportunity in VLSI domain
+If anyone finds this useful and likes my consistency please considering sharing these resources and putting a star mark to this repo.
 
 ##### google docs link for schematic and waveforms of these codes :-
 ##### [https://bit.ly/verilog100days-rtl-code-amit](https://docs.google.com/document/d/1-zQRvykrAULKRdzp-JIBcgrgB1OgqEW9/edit?usp=sharing&ouid=114147819271773947170&rtpof=true&sd=true) 
