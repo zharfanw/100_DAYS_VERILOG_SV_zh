@@ -1,8 +1,8 @@
-module half_subtractor(a,b,dif,bo_out)
+module half_subtractor(a,b,di,bo);
   input a,b;
-  output dif,bo_out;
+  output di,bo;
 
-  assign dif=a^b;
-  assign bo_out= ~a&b;
+  assign di=a^b;
+  assign bo= ~a&b;
 
 endmodule
