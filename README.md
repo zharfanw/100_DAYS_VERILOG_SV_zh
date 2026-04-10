@@ -1,4 +1,6 @@
 # 100_DAYS_RTL Coding Challenge
+This repository is a fork of [100_DAYS_VERILOG_SV](https://github.com/amitvsuryavanshi04/100_DAYS_VERILOG_SV). In this fork, we are working on running and validating the included Verilog/SystemVerilog examples using `iverilog` and the complete toolset provided by [IIC-OSIC-TOOLS](https://github.com/iic-jku/IIC-OSIC-TOOLS).
+
 Starting my 100 days RTL coding challenge 
 just to have discipline and consistency in VLSI domain starting this challenge right from basics to advanced 
 If anyone finds this useful and likes my consistency please consider sharing these resources and putting a star mark to this repo.
