@@ -2,7 +2,7 @@
 //https://github.com/amitvsuryavanshi04/100_DAYS_VERILOG_RTL/blob/main/full-adder_%26_full-subtractor_%5Bday-3%5D/full-adder.v 
 // the above is the link for full adder where you can find the separate module for full adder which is included in this code in 
 // starting from the 14 line of this code 
-module four_bit_adder(input [3:0]a,[3:0]b,input cin, output [3:0]sum,cout); //this is the module four_bit_adder
+module four_bit_adder(input [3:0]a,b,input cin, output [3:0]sum, output cout); //this is the module four_bit_adder
 wire c0,c1,c2,c3;
 full_adder fa1(.a(a[0]),.b(b[0]),.cin(cin),.s(sum[0]),.cout(c0));
 full_adder fa2(.a(a[1]),.b(b[1]),.cin(c0),.s(sum[1]),.cout(c1));
