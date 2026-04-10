@@ -1,0 +1,109 @@
+#! /foss/tools/iverilog/bin/vvp
+:ivl_version "13.0 (devel)" "(s20251012-94-g7786fb67-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/foss/tools/iverilog/lib/ivl/system.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/v2005_math.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/va_math.vpi";
+S_0x585203c58e00 .scope module, "full_adder_tb" "full_adder_tb" 2 2;
+ .timescale 0 0;
+v0x585203c6f130_0 .var "a", 0 0;
+v0x585203c6f1f0_0 .var "b", 0 0;
+v0x585203c6f2c0_0 .net "c", 0 0, L_0x585203c6f930;  1 drivers
+v0x585203c6f3c0_0 .var "cin", 0 0;
+v0x585203c6f490_0 .net "s", 0 0, L_0x585203c6f6c0;  1 drivers
+S_0x585203c58f90 .scope module, "uut" "full_adder" 2 5, 3 1 0, S_0x585203c58e00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "s";
+    .port_info 4 /OUTPUT 1 "c";
+L_0x585203c6f580 .functor XOR 1, v0x585203c6f130_0, v0x585203c6f1f0_0, C4<0>, C4<0>;
+L_0x585203c6f6c0 .functor XOR 1, L_0x585203c6f580, v0x585203c6f3c0_0, C4<0>, C4<0>;
+L_0x585203c6f820 .functor AND 1, L_0x585203c6f580, v0x585203c6f3c0_0, C4<1>, C4<1>;
+L_0x585203c6f890 .functor AND 1, v0x585203c6f130_0, v0x585203c6f1f0_0, C4<1>, C4<1>;
+L_0x585203c6f930 .functor OR 1, L_0x585203c6f820, L_0x585203c6f890, C4<0>, C4<0>;
+v0x585203c59540_0 .net "a", 0 0, v0x585203c6f130_0;  1 drivers
+v0x585203c6eaf0_0 .net "b", 0 0, v0x585203c6f1f0_0;  1 drivers
+v0x585203c6ebb0_0 .net "c", 0 0, L_0x585203c6f930;  alias, 1 drivers
+v0x585203c6ec80_0 .net "cin", 0 0, v0x585203c6f3c0_0;  1 drivers
+v0x585203c6ed40_0 .net "s", 0 0, L_0x585203c6f6c0;  alias, 1 drivers
+v0x585203c6ee50_0 .net "w1", 0 0, L_0x585203c6f580;  1 drivers
+v0x585203c6ef10_0 .net "w2", 0 0, L_0x585203c6f820;  1 drivers
+v0x585203c6efd0_0 .net "w3", 0 0, L_0x585203c6f890;  1 drivers
+    .scope S_0x585203c58e00;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "full_adder_tb.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x585203c58e00 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x585203c58e00;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f130_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f1f0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x585203c6f3c0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 32 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "full_adder_tb.v";
+    "full-adder.v";

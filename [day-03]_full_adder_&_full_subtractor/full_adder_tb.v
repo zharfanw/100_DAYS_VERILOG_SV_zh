@@ -8,6 +8,11 @@ full_adder uut(.a(a),
       .s(s),
       .c(c));
       initial begin
+      $dumpfile("full_adder_tb.vcd");
+      $dumpvars(0, full_adder_tb);
+      end
+
+      initial begin
       a=0;b=0;cin=0;
       #10;
       a=0;b=0;cin=1;
