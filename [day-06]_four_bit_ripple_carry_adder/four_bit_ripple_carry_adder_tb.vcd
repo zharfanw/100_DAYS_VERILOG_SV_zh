@@ -1,0 +1,46 @@
+$date
+	Fri Apr 10 12:19:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module four_bit_ripple_carry_adder_tb $end
+$var wire 4 ! s [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$scope module uut $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var wire 1 " cout $end
+$var wire 4 ' s [3:0] $end
+$var wire 4 ( c [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bz000 (
+b110 '
+b110 &
+b0 %
+b110 $
+b0 #
+0"
+b110 !
+$end
+#100
+b1100 !
+b1100 '
+bz011 (
+b1001 $
+b1001 &
+b11 #
+b11 %
+#200
