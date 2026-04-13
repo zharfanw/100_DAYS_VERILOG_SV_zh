@@ -11,6 +11,9 @@ module sequence_detector_tb;
     );
 
     initial begin
+        $dumpfile("sequence_detector_tb.vcd");
+        $dumpvars(0, sequence_detector_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | clk=%b reset=%b in=%b => out=%b", $time, clk, reset, in, out);
 

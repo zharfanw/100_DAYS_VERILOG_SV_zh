@@ -3,7 +3,10 @@ reg [7:0]A;
 wire [2:0]y;
 encoder_8_3 uut(.A(A),.y(y));
 initial begin 
-A=8'b0000000;
+  $dumpfile("encoder_8_3_tb.vcd");
+  $dumpvars(0, encoder_8_3_tb);
+
+  A=8'b00000000;
 #10;A=8'b00000001;
 #10;A=8'b00000010;
 #10;A=8'b00000100;

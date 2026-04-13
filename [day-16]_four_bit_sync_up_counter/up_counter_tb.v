@@ -26,6 +26,9 @@ up_counter u1(.rst(rst),.clk(clk),.count(count));
 initial clk=1;
 always #5 clk=~clk;
 initial begin
+    $dumpfile("up_counter_tb.vcd");
+    $dumpvars(0, up_counter_tb);
+
     rst=1;#100;
     rst=0;#200;
     rst=1;#100;

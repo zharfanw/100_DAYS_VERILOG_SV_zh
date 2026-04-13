@@ -7,6 +7,11 @@ reg Enable;
 wire [7:0]Result;
   alu_4bit uut (.A(A),.B(B),.opcode(opcode),.Enable(Enable),.Result(Result)); //instatanite the alu module under unit test 
 initial begin
+$dumpfile("alu_4bit_tb.vcd");
+$dumpvars(0, alu_4bit_tb);
+end
+
+initial begin
   //giving different input values at #10 clock ns to see various results
 A=0;B=0;opcode=0;Enable=0;
 #10;A=4'b0000;B=4'b0000;Enable=1'b0;

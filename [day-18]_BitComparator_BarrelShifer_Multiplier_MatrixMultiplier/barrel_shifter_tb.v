@@ -13,6 +13,9 @@ module barrel_shifter_tb;
     );
 
     initial begin
+        $dumpfile("barrel_shifter_tb.vcd");
+        $dumpvars(0, barrel_shifter_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | data_in=%b shift=%d dir=%b => data_out=%b", $time, data_in, shift, dir, data_out);
 

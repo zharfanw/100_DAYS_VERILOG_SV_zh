@@ -11,6 +11,9 @@ module priority_encoder_tb;
     );
 
     initial begin
+        $dumpfile("priority_encoder_tb.vcd");
+        $dumpvars(0, priority_encoder_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | in=%b => out=%b valid=%b", $time, in, out, valid);
 

@@ -15,6 +15,9 @@ module comparator_8bit_tb;
     );
 
     initial begin
+        $dumpfile("comparator_8bit_tb.vcd");
+        $dumpvars(0, comparator_8bit_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | A=%b B=%b => A_gt_B=%b A_lt_B=%b A_eq_B=%b", $time, A, B, A_gt_B, A_lt_B, A_eq_B);
 

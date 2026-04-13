@@ -33,6 +33,9 @@ module simp_comm_sys_tb;
     );
 
     initial begin
+        $dumpfile("simp_comm_sys_tb.vcd");
+        $dumpvars(0, simp_comm_sys_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | Message=%b Sel=%b => Received Message=%b", $time, message, sel, received_message);
 
@@ -51,5 +54,4 @@ module simp_comm_sys_tb;
         $finish;
     end
 endmodule
-
 

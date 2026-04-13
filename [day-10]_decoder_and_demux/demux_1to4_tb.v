@@ -11,6 +11,9 @@ module demux_1to4_tb;
     );
 
     initial begin
+        $dumpfile("demux_1to4_tb.vcd");
+        $dumpvars(0, demux_1to4_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | in=%b sel=%b => out=%b", $time, in, sel, out);
 

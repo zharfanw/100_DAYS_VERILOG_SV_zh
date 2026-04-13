@@ -40,6 +40,9 @@ module t_ff_tb;
 
     // Apply test cases
     initial begin
+        $dumpfile("t_ff_tb.vcd");
+        $dumpvars(0, t_ff_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | t=%b rst=%b clk=%b => q=%b", $time, t, rst, clk, q);
 
@@ -69,4 +72,3 @@ module t_ff_tb;
         $finish;
     end
 endmodule
-

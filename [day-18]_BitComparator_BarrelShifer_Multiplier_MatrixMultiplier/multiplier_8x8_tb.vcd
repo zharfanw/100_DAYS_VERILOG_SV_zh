@@ -1,0 +1,54 @@
+$date
+	Mon Apr 13 23:40:26 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module multiplier_8x8_tb $end
+$var wire 16 ! product [15:0] $end
+$var reg 8 " A [7:0] $end
+$var reg 8 # B [7:0] $end
+$scope module uut $end
+$var wire 8 $ A [7:0] $end
+$var wire 8 % B [7:0] $end
+$var wire 16 & product [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100100 &
+b11 %
+b1100 $
+b11 #
+b1100 "
+b100100 !
+$end
+#10
+b1101001 !
+b1101001 &
+b111 #
+b111 %
+b1111 "
+b1111 $
+#20
+b1100100 !
+b1100100 &
+b10100 #
+b10100 %
+b101 "
+b101 $
+#30
+b1111111000000001 !
+b1111111000000001 &
+b11111111 #
+b11111111 %
+b11111111 "
+b11111111 $
+#40

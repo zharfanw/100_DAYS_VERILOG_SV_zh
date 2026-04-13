@@ -28,6 +28,9 @@ module traffic_light_controller_tb;
 
     // Monitor signals
     initial begin
+        $dumpfile("traffic_light_controller_tb.vcd");
+        $dumpvars(0, traffic_light_controller_tb);
+
         $monitor("Time=%0t | NS_light=%b, EW_light=%b", $time, NS_light, EW_light);
     end
 endmodule

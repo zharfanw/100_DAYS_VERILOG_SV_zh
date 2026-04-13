@@ -25,11 +25,15 @@ module d_type_tb();
   d_type uut (.d(d), .rst(rst), .clk(clk), .q(q), .qn(qn));
   initial begin d=0; clk=0; end
   always #5 clk=~clk;
-  initial begin rst=0; d=1; #10; 
-rst=1; d=1; #10; 
-d=0; #10; 
-rst=0; d=1; #10; 
-rst=1; d=1; #10; 
-$stop;
-end
+  initial begin
+    $dumpfile("d_type_tb.vcd");
+    $dumpvars(0, d_type_tb);
+
+    rst=0; d=1; #10;
+    rst=1; d=1; #10;
+    d=0; #10;
+    rst=0; d=1; #10;
+    rst=1; d=1; #10;
+    $finish;
+  end
 endmodule

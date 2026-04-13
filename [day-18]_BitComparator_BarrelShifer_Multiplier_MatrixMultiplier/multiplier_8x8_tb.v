@@ -11,6 +11,9 @@ module multiplier_8x8_tb;
     );
 
     initial begin
+        $dumpfile("multiplier_8x8_tb.vcd");
+        $dumpvars(0, multiplier_8x8_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | A=%d B=%d => product=%d", $time, A, B, product);
 

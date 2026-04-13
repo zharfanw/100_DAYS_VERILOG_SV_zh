@@ -9,6 +9,9 @@ module deco_3_8_tb;
     );
 
     initial begin
+        $dumpfile("deco_3_8_tb.vcd");
+        $dumpvars(0, deco_3_8_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | in=%b => out=%b", $time, in, out);
 

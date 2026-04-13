@@ -14,6 +14,9 @@ module johnson_counter_tb;
     end
 
     initial begin
+        $dumpfile("johnson_counter_tb.vcd");
+        $dumpvars(0, johnson_counter_tb);
+
         $monitor("Time=%0t | rst=%b clk=%b => q=%b", $time, rst, clk, q);
         rst = 1; #10;
         rst = 0; #50;

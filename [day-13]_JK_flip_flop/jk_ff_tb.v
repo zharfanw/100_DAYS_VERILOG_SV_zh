@@ -18,6 +18,9 @@ module jk_ff_tb;
 
     // Apply test cases
     initial begin
+        $dumpfile("jk_ff_tb.vcd");
+        $dumpvars(0, jk_ff_tb);
+
         // Monitor the signals
         $monitor("Time=%0t | j=%b k=%b clk=%b => q=%b", $time, j, k, clk, q);
 

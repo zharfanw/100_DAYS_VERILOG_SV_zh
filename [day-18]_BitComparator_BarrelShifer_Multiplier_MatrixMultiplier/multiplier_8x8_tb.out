@@ -1,0 +1,65 @@
+#! /foss/tools/iverilog/bin/vvp
+:ivl_version "13.0 (devel)" "(s20251012-94-g7786fb67-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/foss/tools/iverilog/lib/ivl/system.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/v2005_math.vpi";
+:vpi_module "/foss/tools/iverilog/lib/ivl/va_math.vpi";
+S_0x5d896e509e50 .scope module, "multiplier_8x8_tb" "multiplier_8x8_tb" 2 1;
+ .timescale 0 0;
+v0x5d896e51e4d0_0 .var "A", 7 0;
+v0x5d896e51e590_0 .var "B", 7 0;
+v0x5d896e51e660_0 .net "product", 15 0, L_0x5d896e51ea10;  1 drivers
+S_0x5d896e509fe0 .scope module, "uut" "multiplier_8x8" 2 7, 3 1 0, S_0x5d896e509e50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "A";
+    .port_info 1 /INPUT 8 "B";
+    .port_info 2 /OUTPUT 16 "product";
+v0x5d896e50a1e0_0 .net "A", 7 0, v0x5d896e51e4d0_0;  1 drivers
+v0x5d896e51dee0_0 .net "B", 7 0, v0x5d896e51e590_0;  1 drivers
+v0x5d896e51dfc0_0 .net *"_ivl_0", 15 0, L_0x5d896e51e760;  1 drivers
+L_0x761695fe4018 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x5d896e51e080_0 .net *"_ivl_3", 7 0, L_0x761695fe4018;  1 drivers
+v0x5d896e51e160_0 .net *"_ivl_4", 15 0, L_0x5d896e51e8d0;  1 drivers
+L_0x761695fe4060 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x5d896e51e290_0 .net *"_ivl_7", 7 0, L_0x761695fe4060;  1 drivers
+v0x5d896e51e370_0 .net "product", 15 0, L_0x5d896e51ea10;  alias, 1 drivers
+L_0x5d896e51e760 .concat [ 8 8 0 0], v0x5d896e51e4d0_0, L_0x761695fe4018;
+L_0x5d896e51e8d0 .concat [ 8 8 0 0], v0x5d896e51e590_0, L_0x761695fe4060;
+L_0x5d896e51ea10 .arith/mult 16, L_0x5d896e51e760, L_0x5d896e51e8d0;
+    .scope S_0x5d896e509e50;
+T_0 ;
+    %vpi_call 2 14 "$dumpfile", "multiplier_8x8_tb.vcd" {0 0 0};
+    %vpi_call 2 15 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5d896e509e50 {0 0 0};
+    %vpi_call 2 18 "$monitor", "Time=%0t | A=%d B=%d => product=%d", $time, v0x5d896e51e4d0_0, v0x5d896e51e590_0, v0x5d896e51e660_0 {0 0 0};
+    %pushi/vec4 12, 0, 8;
+    %store/vec4 v0x5d896e51e4d0_0, 0, 8;
+    %pushi/vec4 3, 0, 8;
+    %store/vec4 v0x5d896e51e590_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 8;
+    %store/vec4 v0x5d896e51e4d0_0, 0, 8;
+    %pushi/vec4 7, 0, 8;
+    %store/vec4 v0x5d896e51e590_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 5, 0, 8;
+    %store/vec4 v0x5d896e51e4d0_0, 0, 8;
+    %pushi/vec4 20, 0, 8;
+    %store/vec4 v0x5d896e51e590_0, 0, 8;
+    %delay 10, 0;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v0x5d896e51e4d0_0, 0, 8;
+    %pushi/vec4 255, 0, 8;
+    %store/vec4 v0x5d896e51e590_0, 0, 8;
+    %delay 10, 0;
+    %vpi_call 2 32 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "multiplier_8x8_tb.v";
+    "multiplier_8x8.v";
